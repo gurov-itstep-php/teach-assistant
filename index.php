@@ -3,10 +3,13 @@
 session_start();
 //echo('Front-Controller: OK');
 require_once('sys/lib/autoloader.php');
+$router = new \sys\lib\Router;
+$router->run();
 
 // Тесты базовых и ключевых классов:
 // -------------------------------------
 /*
+
 $provider = new \sys\lib\Provider;
 $model = new \sys\core\Model;
 $model->test();
