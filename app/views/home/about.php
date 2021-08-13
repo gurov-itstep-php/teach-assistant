@@ -1,3 +1,3 @@
-<h3 style="color: red">
-    Контент страницы про сайт
-</h3>
+<div class="main-box">
+    <h3>Про сайт</h3>
+</div>

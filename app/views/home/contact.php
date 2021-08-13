@@ -1,3 +1,3 @@
-<h3 style="color: red">
-    Контент страницы контакты
-</h3>
+<div class="main-box">
+    <h3>Контакты</h3>
+</div>

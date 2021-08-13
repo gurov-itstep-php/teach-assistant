@@ -2,12 +2,16 @@
 
 namespace sys\core;
 
+require_once('sys/config/constants.php');
+
 class View {
 
     public $currentUser;
     private $contentPath;
 
-    private const MASTER_PAGE = 'app/views/layouts/base.php';
+    public const RES = RES_DIR;
+    public const ROOT = SITE_ROOT_DIR;
+    private const MASTER_PAGE = BASE_TEMPLATE;
 
     public function __construct($contentPath, $data = null) {
         $this->currentUser = 'Гость';
