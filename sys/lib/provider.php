@@ -13,7 +13,7 @@ class Provider {
         $name = DB_NAME;
         $conn_str = "mysql:host=$host;dbname=$name";
         $this->conn = new \PDO($conn_str, DB_USER, DB_PASS);
-        echo('<h3>Provider - OK!</h3>');
+        //echo('<h3>Provider - OK!</h3>');
     }
 
 }
