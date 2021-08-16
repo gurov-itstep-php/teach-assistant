@@ -11,10 +11,10 @@ class Mailer {
 
     public function __construct($to) {
         $this->to = $to;
-        $this->from = 'Teach-Assistant Admin: gurov.anatoliy@gmail.com'; ////// ??????
+        $this->from = 'Teach-Assistant Admin: gurov.anatoliy@gmail.com'; ////// ?????? !!!!!!!!!
         $this->subject = 'Подтверждение регистрации';
         $this->message = $this->build_message();
-        $this->message = $this->build_headers();
+        $this->headers = $this->build_headers();
     }
 
     private function build_message() {
@@ -23,7 +23,7 @@ class Mailer {
         $html .= '<body>';
         $html .= '<h3>Подтверждение регистрации на сайте Teach-Assistant</h3>';
         $html .= '<h4><a href="http://localhost/php/teach-assistant/auth/confirm/'.$this->to.'">Подтвердить</a></h4>';
-        $html .= '</body';
+        $html .= '</body>';
         $html .= '</html>';
         return $html;
     }

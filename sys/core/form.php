@@ -28,20 +28,21 @@ class Form {
         //
         if(is_array($this->fields) && count($this->fields) > 0) {
             foreach ($this->fields as $field) {
-                    if ($field instanceof Field) {
-                        echo('<div class="form-group">');
+                if ($field instanceof Field) {
+                    echo('<div class="form-group">');
                         //
-                        echo('<label for="'.$field->name.'">');
-                        echo(ucfirst($field->name).':');
-                        echo('</label>');
+                    echo('<label for="'.$field->name.'">');
+                    echo(ucfirst($field->name).':');
+                    echo('</label>');
                         //
-                        $field->generate();
+                    $field->generate();
                         //
-                        echo('<div class="error"');
-                        echo(' id="'.$field->name.'-error">');
-                        echo('valid message');
-                        echo('</div>');
-                        echo('</div>');
+                    echo('<div class="error"');
+                    echo(' id="'.$field->name.'-error">');
+                    echo('');
+                    echo('</div>');
+                        //
+                    echo('</div>');
                 }
             }
         }

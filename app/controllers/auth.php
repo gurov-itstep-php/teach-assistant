@@ -30,7 +30,7 @@ class Auth extends Controller {
             $email = $form->fields[3]->fieldValue;
             $regdate = date('Y-m-d H:i:s');
             $role_id = 3;
-            $tatus_id = 1; // new_user
+            $status_id = 1; // new_user
             $confirm = 'no';
             ///
             $this->model->register($login, $passw, $email, $regdate, $role_id, $status_id, $confirm);
