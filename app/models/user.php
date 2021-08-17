@@ -18,4 +18,28 @@ class User extends Model {
         $params = [$email];
         $this->execute_dml_query($sql, $params);
     }
+
+    public function check_login($login) {
+        $sql = 'select login from users where login=?';
+        $params = [$login];
+        $result = $this->execute_select_query($sql, $params);
+        //
+        if (count($result) === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function authenticate($login, $passw) {
+        $sql = 'select login, passw from users where login=? and passw=?';
+        $params = [$login, $passw];
+        $result = $this->execute_select_query($sql, $params);
+        //
+        if (count($result) > 0 ){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

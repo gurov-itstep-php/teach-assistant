@@ -23,19 +23,30 @@ class Form {
         if($this->enctype !== '') {
             echo(' enctype="'.$this->enctype.'"');
         }
-        // echo(' onsubmit="return false"'); //валидация
+        //*
+        if ($this->name !== 'entryform') {
+            echo(' onsubmit="return false"'); //валидация для регформ
+        }
         echo('>');
         //
         if(is_array($this->fields) && count($this->fields) > 0) {
             foreach ($this->fields as $field) {
                 if ($field instanceof Field) {
                     echo('<div class="form-group">');
-                        //
-                    echo('<label for="'.$field->name.'">');
-                    echo(ucfirst($field->name).':');
-                    echo('</label>');
-                        //
-                    $field->generate();
+                    //*
+                    if ($field->name !== 'stand') {
+                        echo('<label for="'.$field->name.'">');
+                        echo(ucfirst($field->name).':');
+                        echo('</label>');
+                        $field->generate();
+                    } else {
+                        //*
+                        echo('<p style="text-align: center; margin: 30px 0px -10px 0px">');
+                        echo('<input type="checkbox" id="stand" name="stand" value="yes">');
+                        echo('&nbsp;');
+                        echo('<label for="stand">Оставаться в системе</label>');
+                        echo('</p>');
+                    }
                         //
                     echo('<div class="error"');
                     echo(' id="'.$field->name.'-error">');

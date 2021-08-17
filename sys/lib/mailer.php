@@ -22,7 +22,7 @@ class Mailer {
         $html .= '<html>';
         $html .= '<body>';
         $html .= '<h3>Подтверждение регистрации на сайте Teach-Assistant</h3>';
-        $html .= '<h4><a href="http://localhost/php/teach-assistant/auth/confirm/'.$this->to.'">Подтвердить</a></h4>';
+        $html .= '<h4><a href="http://localhost/php/teach-assistant/auth/confirm/'.$this->to.'">Подтвердить</a></h4>'; // адрес где хостится сайт и адрес кому
         $html .= '</body>';
         $html .= '</html>';
         return $html;

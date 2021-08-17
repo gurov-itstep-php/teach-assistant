@@ -6,7 +6,9 @@
 				<div class="col">
 					<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 						<ul class="top_bar_contact_list">
-							<li><div class="question">Have any questions?</div></li>
+							<li>
+								<div class="question">Have any questions?</div>
+							</li>
 							<li>
 								<div>(009) 35475 6688933 32</div>
 							</li>
@@ -16,13 +18,26 @@
 						</ul>
 						<div class="top_bar_login ml-auto">
 							<ul>
-								<li><a href="<?=self::ROOT?>/auth/reg">Register</a></li>
-								<li><a href="<?=self::ROOT?>/auth/entry">Login</a></li>
+								<li>
+									<a href="" style="margin-right: 100px">
+										Hi,
+										<span style="color: yellow">
+											<?= $this->currentUser ?>
+										</span>
+									</a>
+								</li>
+								<?php if ($this->currentUser === 'Guest') { ?>
+									<li><a href="<?= self::ROOT ?>/auth/reg">Register</a></li>
+									<li><a href="<?= self::ROOT ?>/auth/entry">Login</a></li>
+								<?php } else { ?>
+									<li><a href="<?= self::ROOT ?>/auth/profile">Profile</a></li>
+									<li><a href="<?= self::ROOT ?>/auth/exit">Exit</a></li>
+								<?php } ?>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>				
+	</div>
 </div>

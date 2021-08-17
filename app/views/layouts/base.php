@@ -53,6 +53,7 @@
 	<script src="<?=self::RES?>/plugins/video-js/Youtube.min.js"></script>
 	<script src="<?=self::RES?>/plugins/parallax-js-master/parallax.min.js"></script>
 	<script src="<?=self::RES?>/js/custom.js"></script>
+	<script src="<?=$script?>"></script>
 </body>
 
 </html>
