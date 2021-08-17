@@ -2,6 +2,8 @@
 
 namespace sys\core;
 
+use \sys\lib\Status as Status;
+
 require_once('sys/config/constants.php');
 
 class View {
@@ -14,7 +16,7 @@ class View {
     private const MASTER_PAGE = BASE_TEMPLATE;
 
     public function __construct($contentPath, $data = null) {
-        $this->currentUser = 'Гость';
+        $this->currentUser = Status::get_current_user(); // текущий пользователь
         $this->contentPath = "app/views/$contentPath";
         if($data !== null && is_array($data)) {
             extract($data);
