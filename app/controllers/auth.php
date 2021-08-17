@@ -127,4 +127,13 @@ class Auth extends Controller {
             echo('занят');
         }
     }
+	
+	public function ajax_check_email() {
+        $emailX = $_POST['email'];
+        if ($this->model->check_email($emailX)) {
+            echo('свободен');
+        } else {
+            echo('занят');
+        }
+    }
 }
