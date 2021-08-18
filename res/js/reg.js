@@ -77,7 +77,7 @@ $(document).ready(() => {
         }
     });
 
-        // Проверка E-mail:
+    // Проверка E-mail:
     //---------------------------?
     $('#email').blur(() => {
         let emailValue = $('#email').val();
