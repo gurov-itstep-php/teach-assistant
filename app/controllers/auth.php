@@ -82,14 +82,20 @@ class Auth extends Controller {
             $stand = $form->fields[2]->fieldValue;
             //
             if ($this->model->authenticate($login, $passw)) {
-                $_SESSION['user'] = $login;
-                if ($stand === 'yes') {
-                    setcookie('user', $login, time() + 3600 * 24 * 7 ); // куки на 7 дней
+                //*
+                if($this->model->check_confirm($login)) {
+                    $_SESSION['user'] = $login;
+                    if ($stand === 'yes') {
+                        setcookie('user', $login, time() + 3600 * 24 * 7 ); // куки на 7 дней
+                    }
+                    $message = 'Вы успешно авторизованы на сайте Teach-Assistant!<hr>';
+                    $color = 'darkcyan';
+                } else {
+                    $message = 'Ваша регистрация на сайте Teach-Assistant еще не подтверждена!<hr>';
+                    $color = 'darkblue';
                 }
-                $message = 'Вы успешно авторизованы на сайте Teach-Assistant!<hr>';
-                $color = 'darkcyan';
             } else {
-                $message = 'Авторизация провалена - пользователь не найден!<hr>';
+                $message = 'Авторизация провалена - такой пользователь не найден!<hr>';
                 $color = 'red';
             }
             // 
