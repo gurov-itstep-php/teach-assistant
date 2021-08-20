@@ -100,7 +100,7 @@ class Auth extends Controller {
             }
             // 
             return new View('auth/entryinfo.php', [
-                'title' => 'Register-Info',
+                'title' => 'Entry-Info',
                 'message' => $message,
                 'color' => $color
             ]);
