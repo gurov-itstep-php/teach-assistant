@@ -18,4 +18,8 @@ class Home extends Controller {
     public function contact() {
         return new View('home/contact.php', ['title' => 'Контакты']);
     }
+
+    public function feedback() {
+        return new View('home/feedback.php', ['title' => 'Обратная связь']);
+    }
 }
