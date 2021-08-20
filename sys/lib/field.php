@@ -27,6 +27,10 @@ class Field {
         echo(' class="'.$this->className.'"');
         echo(' placeholder="'.$this->name.' here ..."');
         echo(' required');
-        echo('/>');
+        if ($this->tagName === 'textarea'){
+            echo('></textarea>');
+        } else {
+            echo('/>');
+        }
     }
 }

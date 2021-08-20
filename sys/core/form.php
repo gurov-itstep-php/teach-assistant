@@ -14,6 +14,7 @@ class Form {
     public $fields;
 
     public function generate() {
+        // <form
         echo('<form');
         echo(' id="'.$this->name.'"');
         echo(' class="'.$this->className.'"');
@@ -33,26 +34,22 @@ class Form {
             foreach ($this->fields as $field) {
                 if ($field instanceof Field) {
                     echo('<div class="form-group">');
-                    //*
                     if ($field->name !== 'stand') {
                         echo('<label for="'.$field->name.'">');
                         echo(ucfirst($field->name).':');
                         echo('</label>');
                         $field->generate();
                     } else {
-                        //*
                         echo('<p style="text-align: center; margin: 30px 0px -10px 0px">');
                         echo('<input type="checkbox" id="stand" name="stand" value="yes">');
                         echo('&nbsp;');
                         echo('<label for="stand">Оставаться в системе</label>');
                         echo('</p>');
                     }
-                        //
                     echo('<div class="error"');
                     echo(' id="'.$field->name.'-error">');
                     echo('');
                     echo('</div>');
-                        //
                     echo('</div>');
                 }
             }
@@ -63,7 +60,7 @@ class Form {
         echo('<input type="reset" id="reset" name="reset" value="Очистить" class="btn-sm btn-danger my-btn" />');
         echo('</div>');
         //
-        echo('</form>');
+        echo('</form>'); // </form>
     }
 
     public function fill() {
