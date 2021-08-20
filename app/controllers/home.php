@@ -4,22 +4,25 @@ namespace app\controllers;
 
 use \sys\core\View as View;
 use \sys\core\Controller as Controller;
+use \app\forms\FeedbackForm as FeedbackForm;
 
 class Home extends Controller {
 
     public function index() {
-        return new View('home/index.php', ['title' => 'Главная']);
+        return new View('home/index.php', [
+            'title' => 'Главная'
+        ]);
     }
 
     public function about() {
-        return new View('home/about.php', ['title' => 'Про сайт']);
+        return new View('home/about.php', [
+            'title' => 'Про сайт'
+        ]);
     }
 
     public function contact() {
-        return new View('home/contact.php', ['title' => 'Контакты']);
-    }
-
-    public function feedback() {
-        return new View('home/feedback.php', ['title' => 'Обратная связь']);
+        return new View('home/contact.php', [
+            'title' => 'Контакты'
+        ]);
     }
 }

@@ -19,7 +19,7 @@
 							<li><a href="<?=self::ROOT?>/catalog">catalog</a></li>
 							<li><a href="<?=self::ROOT?>/admin">admin</a></li>
 							<li><a href="<?=self::ROOT?>/home/contact">contact</a></li>
-							<li><a href="<?=self::ROOT?>/home/feedback">feedback</a></li>
+							<li><a href="<?=self::ROOT?>/feedback">feedback</a></li>
 
 						</ul>
 						<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
