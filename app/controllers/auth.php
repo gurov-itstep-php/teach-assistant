@@ -95,7 +95,7 @@ class Auth extends Controller {
                     $color = 'darkblue';
                 }
             } else {
-                $message = 'Авторизация провалена - такой пользователь не найден!<hr>';
+                $message = 'Авторизация провалена!<br> - такой пользователь не найден! <hr>';
                 $color = 'red';
             }
             // 

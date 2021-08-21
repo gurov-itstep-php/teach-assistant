@@ -66,4 +66,12 @@ class User extends Model {
             return false;
         }
     }
+
+    public function get_uesr_email_by_ligin($login) {
+        $sql = 'select email from users where login=?';
+        $params = [$login];
+        $res = $this->execute_select_query($sql, $params);
+        return $res;
+    }
+        
 }
