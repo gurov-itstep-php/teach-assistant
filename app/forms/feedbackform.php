@@ -14,10 +14,8 @@ class Feedbackform extends Form {
         $this->actionPath = '#';
         $this->enctype = '';
         $this->fields = [
-            new Field('name', 'input', 'text', 'form-control'),
-            new Field('email', 'input', 'text', 'form-control'),
             new Field('subject', 'input', 'text', 'form-control'),
-            new Field('message', 'textarea', '', 'form-control') 
+            new Field('message', 'textarea', 'text', 'form-control') 
             // !!! не работает <textarea> - выдает ошибку message-error - парный тег????? - решено!
         ];
     } 
