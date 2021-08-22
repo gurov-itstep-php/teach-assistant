@@ -5,6 +5,12 @@ namespace app\models;
 use \sys\core\Model as Model;
 
 class Category extends Model {
+    //
+    public function get_category($categoryId) {
+        $sql = 'select * from categories where id=?';
+        $params = [$categoryId];
+        $this->execute_select_query($sql, $params);
+    }
 
     public function add_category($categoryName) {
         $sql = "insert into categories (name) values (?)";
