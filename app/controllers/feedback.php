@@ -53,7 +53,7 @@ class Feedback extends Controller
         } else {
             $message = 'Для авторизации перейдите по ссыдке: <a href="http://localhost/php/teach-assistant/auth/entry">Войти в систему</a><br><br>';
             $message .= "Если Вы еще не зарегистрированы на сайте Teach-Assistant,<br> пожалуйста зарегистрируйтесь по ссыле: <br>";
-            $message .= '<a href="http://localhost/php/teach-assistant/auth/entry">Зарегистрироваться</a>';
+            $message .= '<a href="http://localhost/php/teach-assistant/auth/reg">Зарегистрироваться</a>';
             $color = 'darkgreen';
             new View('feedback/feedbackguest.php', [
                 'title' => 'Обратная связь',
